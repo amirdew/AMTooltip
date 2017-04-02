@@ -1,0 +1,689 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		191F622B34190C654597B313CADACA5F /* AMTooltipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2738A72CC9B0F0084DB9F94565002930 /* AMTooltipView.swift */; };
+		2878FAC865B5DCE6BE9337FF4F46F6A0 /* AMTooltipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C95428C4719540D68717B842FD63FB61 /* AMTooltipView.xib */; };
+		3D0E340644E8277BDFB2AB5B4446B744 /* Pods-AMTooltip_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3176444FF1AD85D7557CD584A132DB42 /* Pods-AMTooltip_Example-dummy.m */; };
+		66EDAD709C91C1E1F9B5E3D6D42E1893 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		9555BADECF81E87D349E0B8D3B83A11D /* AMTooltip.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4F9F4855E761EC59E25AE138A6D13534 /* AMTooltip.bundle */; };
+		9BC7E5C20CA2045AADCCECCF901C41ED /* AMTooltip-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DCAECBEB9AAF3C46E2560922CFAC0A8B /* AMTooltip-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1CAA8A9DE4400AFB48D468647CCB781 /* Pods-AMTooltip_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1D9D77EC928FF707BB76D103B0DCB5 /* Pods-AMTooltip_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EDE3B15E5454C351E53123D3136CC9E8 /* AMTooltip-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1167FC6632095F66FFB67778F3A1C3AA /* AMTooltip-dummy.m */; };
+		EF2FCF8AC55A0104E6EB8B96B5C1E67C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		864D11865FA1B7217E07944B117E7CCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5030E77FE21810A80439D517CB184EC;
+			remoteInfo = AMTooltip;
+		};
+		EBDC76577380CA9E137559CCA753840B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9C424DB051F33411546E79465968FC5;
+			remoteInfo = "AMTooltip-AMTooltip";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1167FC6632095F66FFB67778F3A1C3AA /* AMTooltip-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AMTooltip-dummy.m"; sourceTree = "<group>"; };
+		149DC8EBD9CD5FBD67B2FEDD78834479 /* Pods-AMTooltip_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AMTooltip_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1D1D9D77EC928FF707BB76D103B0DCB5 /* Pods-AMTooltip_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AMTooltip_Example-umbrella.h"; sourceTree = "<group>"; };
+		2507FE086CF29D9E949BD8860C7983AA /* Pods-AMTooltip_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AMTooltip_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		2738A72CC9B0F0084DB9F94565002930 /* AMTooltipView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AMTooltipView.swift; sourceTree = "<group>"; };
+		3176444FF1AD85D7557CD584A132DB42 /* Pods-AMTooltip_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AMTooltip_Example-dummy.m"; sourceTree = "<group>"; };
+		35B0B5B2A597462CFADFE54910D08ED4 /* Pods-AMTooltip_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AMTooltip_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		41BC68F8B4862B8CBD9591FAC2CEEF07 /* AMTooltip.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AMTooltip.xcconfig; sourceTree = "<group>"; };
+		4495707BA90FA21F73D70CF350E61E59 /* Pods-AMTooltip_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AMTooltip_Example-resources.sh"; sourceTree = "<group>"; };
+		4F9F4855E761EC59E25AE138A6D13534 /* AMTooltip.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AMTooltip.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		51BC4B2D3ED6CF635A015179F43773E4 /* AMTooltip-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AMTooltip-prefix.pch"; sourceTree = "<group>"; };
+		7177DF60ABF84D6D527B958673E36EE2 /* AMTooltip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AMTooltip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		767659419BAC31D6474D49EE96600E6D /* Pods-AMTooltip_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AMTooltip_Example-frameworks.sh"; sourceTree = "<group>"; };
+		8BA78C567731F14FE035137FC410DB9F /* Pods_AMTooltip_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AMTooltip_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FAD1F6267C37EBAA2F5BEB5F0367217 /* Pods-AMTooltip_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-AMTooltip_Example.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FB423BEA0DDC71E4CED0446A4ED2BB8 /* Pods-AMTooltip_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AMTooltip_Example.release.xcconfig"; sourceTree = "<group>"; };
+		B1EDA0E5E39DF40544ECEC52198B90A0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C95428C4719540D68717B842FD63FB61 /* AMTooltipView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = AMTooltipView.xib; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DCAECBEB9AAF3C46E2560922CFAC0A8B /* AMTooltip-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AMTooltip-umbrella.h"; sourceTree = "<group>"; };
+		DF1C3262A8D0B45E46505A2182A17C69 /* ResourceBundle-AMTooltip-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-AMTooltip-Info.plist"; sourceTree = "<group>"; };
+		EB5ECF0D28F17794C2E480CB3C250F3F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD71BC10A5D343CE581E9D92E527F391 /* AMTooltip.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AMTooltip.modulemap; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2DFA0F1E724B1BC554DE45A08520D103 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59349FBB285230BC7BDB5B46D9CBB7E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66EDAD709C91C1E1F9B5E3D6D42E1893 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78B99427B63912EC8A95513D55A9D904 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF2FCF8AC55A0104E6EB8B96B5C1E67C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F9DF507006FFFD937C31EDB58CE04A2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2738A72CC9B0F0084DB9F94565002930 /* AMTooltipView.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3699A29F988277C2CDD3A9FEAD8EE2F7 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C8E25A1E2FFDC6180DB4DE696D05806D /* Pods-AMTooltip_Example */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		46ACDC504DE8DA32EBD098849C302FD4 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7898D41334C0C3AB72DD408FE1CFEB15 /* AMTooltip */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		4A95FF2F5088662587800076AA08C5E3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD71BC10A5D343CE581E9D92E527F391 /* AMTooltip.modulemap */,
+				41BC68F8B4862B8CBD9591FAC2CEEF07 /* AMTooltip.xcconfig */,
+				1167FC6632095F66FFB67778F3A1C3AA /* AMTooltip-dummy.m */,
+				51BC4B2D3ED6CF635A015179F43773E4 /* AMTooltip-prefix.pch */,
+				DCAECBEB9AAF3C46E2560922CFAC0A8B /* AMTooltip-umbrella.h */,
+				EB5ECF0D28F17794C2E480CB3C250F3F /* Info.plist */,
+				DF1C3262A8D0B45E46505A2182A17C69 /* ResourceBundle-AMTooltip-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/AMTooltip";
+			sourceTree = "<group>";
+		};
+		4BEFE405EDED3EC3F64C510C146CE16F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				88D3540200DA55E0AD333DE060166C0D /* AMTooltip */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7898D41334C0C3AB72DD408FE1CFEB15 /* AMTooltip */ = {
+			isa = PBXGroup;
+			children = (
+				E1F50D5F0FD6054C65D46ADEEB31DFE9 /* AMTooltip */,
+				4BEFE405EDED3EC3F64C510C146CE16F /* Resources */,
+				4A95FF2F5088662587800076AA08C5E3 /* Support Files */,
+			);
+			name = AMTooltip;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				46ACDC504DE8DA32EBD098849C302FD4 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				97B9B9B49D1EB3441D9B6F2CA7759071 /* Products */,
+				3699A29F988277C2CDD3A9FEAD8EE2F7 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		88D3540200DA55E0AD333DE060166C0D /* AMTooltip */ = {
+			isa = PBXGroup;
+			children = (
+				8907EE365BE572B26289BB0C9BF3AB14 /* Assets */,
+			);
+			path = AMTooltip;
+			sourceTree = "<group>";
+		};
+		8907EE365BE572B26289BB0C9BF3AB14 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				C95428C4719540D68717B842FD63FB61 /* AMTooltipView.xib */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		97B9B9B49D1EB3441D9B6F2CA7759071 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F9F4855E761EC59E25AE138A6D13534 /* AMTooltip.bundle */,
+				7177DF60ABF84D6D527B958673E36EE2 /* AMTooltip.framework */,
+				8BA78C567731F14FE035137FC410DB9F /* Pods_AMTooltip_Example.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C8E25A1E2FFDC6180DB4DE696D05806D /* Pods-AMTooltip_Example */ = {
+			isa = PBXGroup;
+			children = (
+				B1EDA0E5E39DF40544ECEC52198B90A0 /* Info.plist */,
+				8FAD1F6267C37EBAA2F5BEB5F0367217 /* Pods-AMTooltip_Example.modulemap */,
+				149DC8EBD9CD5FBD67B2FEDD78834479 /* Pods-AMTooltip_Example-acknowledgements.markdown */,
+				35B0B5B2A597462CFADFE54910D08ED4 /* Pods-AMTooltip_Example-acknowledgements.plist */,
+				3176444FF1AD85D7557CD584A132DB42 /* Pods-AMTooltip_Example-dummy.m */,
+				767659419BAC31D6474D49EE96600E6D /* Pods-AMTooltip_Example-frameworks.sh */,
+				4495707BA90FA21F73D70CF350E61E59 /* Pods-AMTooltip_Example-resources.sh */,
+				1D1D9D77EC928FF707BB76D103B0DCB5 /* Pods-AMTooltip_Example-umbrella.h */,
+				2507FE086CF29D9E949BD8860C7983AA /* Pods-AMTooltip_Example.debug.xcconfig */,
+				9FB423BEA0DDC71E4CED0446A4ED2BB8 /* Pods-AMTooltip_Example.release.xcconfig */,
+			);
+			name = "Pods-AMTooltip_Example";
+			path = "Target Support Files/Pods-AMTooltip_Example";
+			sourceTree = "<group>";
+		};
+		E1F50D5F0FD6054C65D46ADEEB31DFE9 /* AMTooltip */ = {
+			isa = PBXGroup;
+			children = (
+				2F9DF507006FFFD937C31EDB58CE04A2 /* Classes */,
+			);
+			path = AMTooltip;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B427783CE3B2576113F54B8071CEC1BC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1CAA8A9DE4400AFB48D468647CCB781 /* Pods-AMTooltip_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6D7178BCF523843A72BB46FBDEB8241 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BC7E5C20CA2045AADCCECCF901C41ED /* AMTooltip-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A5030E77FE21810A80439D517CB184EC /* AMTooltip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42C96C9EDEE44AA9A0BFA05E3E0FFA7F /* Build configuration list for PBXNativeTarget "AMTooltip" */;
+			buildPhases = (
+				13F0648ACDF5DA8E4893EB5950807364 /* Sources */,
+				78B99427B63912EC8A95513D55A9D904 /* Frameworks */,
+				AAD7364A2B5C2A8704756AC6C02F06EE /* Resources */,
+				D6D7178BCF523843A72BB46FBDEB8241 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BAF9B12073E2C4A8CCA18CAA69F9D3C0 /* PBXTargetDependency */,
+			);
+			name = AMTooltip;
+			productName = AMTooltip;
+			productReference = 7177DF60ABF84D6D527B958673E36EE2 /* AMTooltip.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AC50C834101383DA2AAF93C9390423AF /* Pods-AMTooltip_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 360349B146411EA0B113137A43D5B946 /* Build configuration list for PBXNativeTarget "Pods-AMTooltip_Example" */;
+			buildPhases = (
+				5FD4B8F8D38C5A44A2880EA92F55BFB4 /* Sources */,
+				59349FBB285230BC7BDB5B46D9CBB7E0 /* Frameworks */,
+				B427783CE3B2576113F54B8071CEC1BC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A76EE8614044E6128AE4D2993AACE838 /* PBXTargetDependency */,
+			);
+			name = "Pods-AMTooltip_Example";
+			productName = "Pods-AMTooltip_Example";
+			productReference = 8BA78C567731F14FE035137FC410DB9F /* Pods_AMTooltip_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B9C424DB051F33411546E79465968FC5 /* AMTooltip-AMTooltip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FB4270368F40077315F7937E965EE31 /* Build configuration list for PBXNativeTarget "AMTooltip-AMTooltip" */;
+			buildPhases = (
+				2C4DDDE5A3BC4F8B2FC710CDB860A23B /* Sources */,
+				2DFA0F1E724B1BC554DE45A08520D103 /* Frameworks */,
+				5F0D38E04639A2C06EA2FBF5CEFCBB3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AMTooltip-AMTooltip";
+			productName = "AMTooltip-AMTooltip";
+			productReference = 4F9F4855E761EC59E25AE138A6D13534 /* AMTooltip.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					A5030E77FE21810A80439D517CB184EC = {
+						LastSwiftMigration = 0820;
+					};
+					AC50C834101383DA2AAF93C9390423AF = {
+						LastSwiftMigration = 0820;
+					};
+				};
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 97B9B9B49D1EB3441D9B6F2CA7759071 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5030E77FE21810A80439D517CB184EC /* AMTooltip */,
+				B9C424DB051F33411546E79465968FC5 /* AMTooltip-AMTooltip */,
+				AC50C834101383DA2AAF93C9390423AF /* Pods-AMTooltip_Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5F0D38E04639A2C06EA2FBF5CEFCBB3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2878FAC865B5DCE6BE9337FF4F46F6A0 /* AMTooltipView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAD7364A2B5C2A8704756AC6C02F06EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9555BADECF81E87D349E0B8D3B83A11D /* AMTooltip.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13F0648ACDF5DA8E4893EB5950807364 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDE3B15E5454C351E53123D3136CC9E8 /* AMTooltip-dummy.m in Sources */,
+				191F622B34190C654597B313CADACA5F /* AMTooltipView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C4DDDE5A3BC4F8B2FC710CDB860A23B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FD4B8F8D38C5A44A2880EA92F55BFB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D0E340644E8277BDFB2AB5B4446B744 /* Pods-AMTooltip_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A76EE8614044E6128AE4D2993AACE838 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AMTooltip;
+			target = A5030E77FE21810A80439D517CB184EC /* AMTooltip */;
+			targetProxy = 864D11865FA1B7217E07944B117E7CCF /* PBXContainerItemProxy */;
+		};
+		BAF9B12073E2C4A8CCA18CAA69F9D3C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AMTooltip-AMTooltip";
+			target = B9C424DB051F33411546E79465968FC5 /* AMTooltip-AMTooltip */;
+			targetProxy = EBDC76577380CA9E137559CCA753840B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00D8A25FE918C496C3D35678C1852C7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2507FE086CF29D9E949BD8860C7983AA /* Pods-AMTooltip_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-AMTooltip_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AMTooltip_Example/Pods-AMTooltip_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_AMTooltip_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0EC1957D1C8B789BDFD634D1502F1C28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41BC68F8B4862B8CBD9591FAC2CEEF07 /* AMTooltip.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AMTooltip";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/AMTooltip/ResourceBundle-AMTooltip-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = AMTooltip;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		1C908C9E23B0214C9B9B55CCB6C90A02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4DD3CBC72CFCEE24C2D575974EF4E81F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41BC68F8B4862B8CBD9591FAC2CEEF07 /* AMTooltip.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AMTooltip/AMTooltip-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AMTooltip/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AMTooltip/AMTooltip.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = AMTooltip;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9253702625FEE60359B07A6DA8C19C18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41BC68F8B4862B8CBD9591FAC2CEEF07 /* AMTooltip.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AMTooltip/AMTooltip-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AMTooltip/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AMTooltip/AMTooltip.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = AMTooltip;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A9E8533E615EA7FD02D27524E68EE149 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		C4084F1DC9F8EAD10A1D2936DDFE5B2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41BC68F8B4862B8CBD9591FAC2CEEF07 /* AMTooltip.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AMTooltip";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/AMTooltip/ResourceBundle-AMTooltip-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = AMTooltip;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		F5691FFAB847010199DFD8BE0E388937 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FB423BEA0DDC71E4CED0446A4ED2BB8 /* Pods-AMTooltip_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-AMTooltip_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AMTooltip_Example/Pods-AMTooltip_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_AMTooltip_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9E8533E615EA7FD02D27524E68EE149 /* Debug */,
+				1C908C9E23B0214C9B9B55CCB6C90A02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		360349B146411EA0B113137A43D5B946 /* Build configuration list for PBXNativeTarget "Pods-AMTooltip_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00D8A25FE918C496C3D35678C1852C7C /* Debug */,
+				F5691FFAB847010199DFD8BE0E388937 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FB4270368F40077315F7937E965EE31 /* Build configuration list for PBXNativeTarget "AMTooltip-AMTooltip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EC1957D1C8B789BDFD634D1502F1C28 /* Debug */,
+				C4084F1DC9F8EAD10A1D2936DDFE5B2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42C96C9EDEE44AA9A0BFA05E3E0FFA7F /* Build configuration list for PBXNativeTarget "AMTooltip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DD3CBC72CFCEE24C2D575974EF4E81F /* Debug */,
+				9253702625FEE60359B07A6DA8C19C18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

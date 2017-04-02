@@ -1,0 +1,16 @@
+PODS:
+  - AMTooltip (1.0.0)
+
+DEPENDENCIES:
+  - AMTooltip (from `../`)
+
+EXTERNAL SOURCES:
+  AMTooltip:
+    :path: ../
+
+SPEC CHECKSUMS:
+  AMTooltip: 9a74103bcb7ffd6fd9f4c5c476dc4f4d9389cbe9
+
+PODFILE CHECKSUM: 34b22323def086ca7127745770367138f617f8e5
+
+COCOAPODS: 1.0.1

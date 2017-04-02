@@ -1,0 +1,5 @@
+use_frameworks!
+
+target 'AMTooltip_Example' do
+  pod 'AMTooltip', :path => '../'
+end

@@ -1,17 +1,16 @@
 //
 //  ViewController.swift
-//  AMTooltip
+//  AMTooltip_Example
 //
-//  Created by amir on 4/1/17.
+//  Created by amir on 4/2/17.
 //  Copyright © 2017 amirdew. All rights reserved.
 //
 
 import UIKit
+import AMTooltip
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var targetView: UIView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,13 +20,16 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
+
+    @IBAction func showTooltipAction(_ sender: Any) {
         
-        AMTooltipView(side: .bottom, message: "some messages", focusView:targetView, target: self)
+        
+        AMTooltipView(side: .auto,
+                      message: "some text",
+                      focusView: sender as! UIView,
+                      target: self)
         
     }
-
 
 }
 

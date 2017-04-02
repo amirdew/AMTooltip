@@ -29,7 +29,7 @@ struct AMTooltipViewConfig{
 
 
 
-public class AMTooltipView: UIView {
+open class AMTooltipView: UIView {
     
     var duration:CGFloat = 4.0
     var animationShowDuration = 0.45
@@ -52,13 +52,13 @@ public class AMTooltipView: UIView {
     @IBOutlet weak var messageRightSpaceFromBottomDot: NSLayoutConstraint!
     
     
-    @IBOutlet weak public  var topDotView: UIView!
-    @IBOutlet weak public  var topDotLineView: UIView!
-    @IBOutlet weak public  var messageWrapperView: UIView!
+    @IBOutlet weak open  var topDotView: UIView!
+    @IBOutlet weak open  var topDotLineView: UIView!
+    @IBOutlet weak open  var messageWrapperView: UIView!
     
-    @IBOutlet weak public  var bottomDotView: UIView!
-    @IBOutlet weak public  var bottomDotLineView: UIView!
-    @IBOutlet weak public  var bottomMessageWrapperView: UIView!
+    @IBOutlet weak open  var bottomDotView: UIView!
+    @IBOutlet weak open  var bottomDotLineView: UIView!
+    @IBOutlet weak open  var bottomMessageWrapperView: UIView!
     
     
     
@@ -69,13 +69,13 @@ public class AMTooltipView: UIView {
     @IBOutlet weak var bottomMessageLabel: UILabel!
     
     //MARK: - properties
-     public var delegate:AMTooltipViewDelegate!
-     @IBOutlet weak var contentView: UIView!
+    open var delegate:AMTooltipViewDelegate!
+    @IBOutlet weak var contentView: UIView!
     
     
     //MARK: - init
     
-    private func setup(){
+    fileprivate func setup(){
         loadNib()
         
         self.addSubview(contentView)
@@ -94,23 +94,40 @@ public class AMTooltipView: UIView {
         
     }
     
-    private func loadNib() {
-        let bundle = Bundle(for: AMTooltipView.classForCoder())
-        bundle.loadNibNamed("AMTooltipView", owner: self, options: nil)
+    fileprivate func loadNib() {
+        
+        
+        let podBundle = Bundle(for: self.classForCoder)
+        
+        if let bundleURL = podBundle.url(forResource: "AMTooltip", withExtension: "bundle") {
+            
+            if let bundle = Bundle(url: bundleURL) {
+                
+                bundle.loadNibNamed("AMTooltipView", owner: self, options: nil)
+            }else {
+                
+                assertionFailure("Could not load the bundle")
+            }
+        }else {
+            
+            assertionFailure("Could not create a path to the bundle")
+        }
+        
+        
     }
     
     
     //MARK: - init and show
     
     @discardableResult convenience public init(side:AMTooltipViewSide, message:String!, focusView:UIView, target:Any, complete:(()->())! = nil){
-    
+        
         var view:UIView!
         if let targetView = target as? UIView{ view = targetView}
         if let targetViewController = target as? UIViewController{ view = targetViewController.view}
         
         if view == nil {
-             self.init(frame:.zero)
-             return
+            self.init(frame:.zero)
+            return
         }
         
         
@@ -121,7 +138,7 @@ public class AMTooltipView: UIView {
         
         focusFrame.origin.y -= 5
         focusFrame.origin.x -= 15
-    
+        
         self.init(side: side, message: message, focusFrame: focusFrame, target: target, complete:complete)
     }
     
@@ -154,7 +171,7 @@ public class AMTooltipView: UIView {
         view.addSubview(self)
         
         self.translatesAutoresizingMaskIntoConstraints = false
-          messageLabel.text = message
+        messageLabel.text = message
         
         view.addConstraints([
             
@@ -177,14 +194,14 @@ public class AMTooltipView: UIView {
         
         let tap = UITapGestureRecognizer { (gesture:UIGestureRecognizer) in
             
-            self.hide(complete: complete)
+            self.hide(complete)
         }
         
         tap.numberOfTapsRequired = 1
         tap.numberOfTouchesRequired = 1
         grayWrapper.addGestureRecognizer(tap)
         
-
+        
         self.show()
         
         
@@ -194,8 +211,8 @@ public class AMTooltipView: UIView {
     
     func show(){
         
-    
-    
+        
+        
         
         self.alpha = 0
         textWidthConstraint.constant = 270
@@ -235,7 +252,7 @@ public class AMTooltipView: UIView {
         bottomDotView.isHidden = config.side != .bottom
         bottomDotLineView.isHidden = config.side != .bottom
         bottomMessageWrapperView.isHidden = config.side != .bottom
-  
+        
         
         messageLabel.text = message
         bottomMessageLabel.text = message
@@ -246,11 +263,11 @@ public class AMTooltipView: UIView {
         }) { (finished:Bool) in
             
         }
-    
+        
     }
     
     
-    public func hide(complete: (()->())! = nil){
+    open func hide(_ complete: (()->())! = nil){
         
         UIView.animate(withDuration: 0.3, animations: {
             self.alpha = 0
@@ -271,9 +288,9 @@ public class AMTooltipView: UIView {
 class CutOutViewWrapper:UIView{
     
     
-    public var cutView:UIView!
-
-    override public func draw(_ rect: CGRect) {
+    open var cutView:UIView!
+    
+    override open func draw(_ rect: CGRect) {
         super.draw(rect)
         
         
@@ -286,7 +303,7 @@ class CutOutViewWrapper:UIView{
             context.setBlendMode(.normal)
         }
     }
-
+    
 }
 
 
@@ -298,7 +315,7 @@ extension UIGestureRecognizer{
     
     public typealias ActionClosure = (_ gesture: UIGestureRecognizer) -> Void
     
-    private struct AssociatedKeys {
+    fileprivate struct AssociatedKeys {
         static var actionClosure:ActionClosure?
     }
     
@@ -323,7 +340,7 @@ extension UIGestureRecognizer{
     }
     
     
-    func handelAction(gesture:UIGestureRecognizer){
+    func handelAction(_ gesture:UIGestureRecognizer){
         if let actionClosure = self.actionClosure as? ActionClosure{
             actionClosure(gesture)
         }

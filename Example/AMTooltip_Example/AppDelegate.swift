@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  AMTooltip
+//  AMTooltip_Example
 //
-//  Created by amir on 4/1/17.
+//  Created by amir on 4/2/17.
 //  Copyright © 2017 amirdew. All rights reserved.
 //
 
