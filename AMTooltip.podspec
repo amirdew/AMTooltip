@@ -32,9 +32,9 @@ simple and easy library to show tooltip.
 
   s.source_files = 'AMTooltip/Classes/**/*'
   
-   s.resource_bundles = {
-     'AMTooltip' => ['AMTooltip/Assets/*']
-   }
+  s.resource_bundles = {
+     'AMTooltip' => ['AMTooltip/Assets/*.xib']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
