@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AMTooltip'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'Simple library to show tooltip.'
 
 # This description is used to generate tags and improve search results.
