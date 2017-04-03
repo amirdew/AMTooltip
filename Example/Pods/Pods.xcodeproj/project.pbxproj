@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		191F622B34190C654597B313CADACA5F /* AMTooltipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2738A72CC9B0F0084DB9F94565002930 /* AMTooltipView.swift */; };
-		2878FAC865B5DCE6BE9337FF4F46F6A0 /* AMTooltipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C95428C4719540D68717B842FD63FB61 /* AMTooltipView.xib */; };
 		3D0E340644E8277BDFB2AB5B4446B744 /* Pods-AMTooltip_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3176444FF1AD85D7557CD584A132DB42 /* Pods-AMTooltip_Example-dummy.m */; };
 		66EDAD709C91C1E1F9B5E3D6D42E1893 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		9555BADECF81E87D349E0B8D3B83A11D /* AMTooltip.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4F9F4855E761EC59E25AE138A6D13534 /* AMTooltip.bundle */; };
 		9BC7E5C20CA2045AADCCECCF901C41ED /* AMTooltip-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DCAECBEB9AAF3C46E2560922CFAC0A8B /* AMTooltip-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB3DFDA71E9274B300F045B4 /* AMTooltipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB3DFDA51E92743800F045B4 /* AMTooltipView.xib */; };
 		D1CAA8A9DE4400AFB48D468647CCB781 /* Pods-AMTooltip_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1D9D77EC928FF707BB76D103B0DCB5 /* Pods-AMTooltip_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EDE3B15E5454C351E53123D3136CC9E8 /* AMTooltip-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1167FC6632095F66FFB67778F3A1C3AA /* AMTooltip-dummy.m */; };
 		EF2FCF8AC55A0104E6EB8B96B5C1E67C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
@@ -53,8 +53,8 @@
 		8FAD1F6267C37EBAA2F5BEB5F0367217 /* Pods-AMTooltip_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-AMTooltip_Example.modulemap"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9FB423BEA0DDC71E4CED0446A4ED2BB8 /* Pods-AMTooltip_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AMTooltip_Example.release.xcconfig"; sourceTree = "<group>"; };
+		AB3DFDA51E92743800F045B4 /* AMTooltipView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMTooltipView.xib; sourceTree = "<group>"; };
 		B1EDA0E5E39DF40544ECEC52198B90A0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C95428C4719540D68717B842FD63FB61 /* AMTooltipView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = AMTooltipView.xib; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DCAECBEB9AAF3C46E2560922CFAC0A8B /* AMTooltip-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AMTooltip-umbrella.h"; sourceTree = "<group>"; };
 		DF1C3262A8D0B45E46505A2182A17C69 /* ResourceBundle-AMTooltip-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-AMTooltip-Info.plist"; sourceTree = "<group>"; };
@@ -177,7 +177,7 @@
 		8907EE365BE572B26289BB0C9BF3AB14 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				C95428C4719540D68717B842FD63FB61 /* AMTooltipView.xib */,
+				AB3DFDA51E92743800F045B4 /* AMTooltipView.xib */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -343,7 +343,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2878FAC865B5DCE6BE9337FF4F46F6A0 /* AMTooltipView.xib in Resources */,
+				AB3DFDA71E9274B300F045B4 /* AMTooltipView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

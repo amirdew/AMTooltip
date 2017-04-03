@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,16 +23,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sc-qS-lXN">
-                                <rect key="frame" x="143" y="318.5" width="89" height="30"/>
+                                <rect key="frame" x="143" y="65" width="89" height="30"/>
                                 <state key="normal" title="Show Tooltip"/>
                                 <connections>
                                     <action selector="showTooltipAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Je6-TY-cmW"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uv0-OI-dIx">
+                                <rect key="frame" x="100.5" y="568.5" width="174" height="30"/>
+                                <state key="normal" title="Show Customized Tooltip"/>
+                                <connections>
+                                    <action selector="showCustomizedTooltipAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LJv-MY-cev"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="1sc-qS-lXN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ozi-D2-5NP"/>
+                            <constraint firstItem="Uv0-OI-dIx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.75" id="IV3-tg-8i8"/>
+                            <constraint firstItem="1sc-qS-lXN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.24" id="Ozi-D2-5NP"/>
+                            <constraint firstItem="Uv0-OI-dIx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RPc-zS-JoK"/>
                             <constraint firstItem="1sc-qS-lXN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lfS-2G-YQi"/>
                         </constraints>
                     </view>

@@ -24,12 +24,33 @@ class ViewController: UIViewController {
     @IBAction func showTooltipAction(_ sender: Any) {
         
         
-        AMTooltipView(side: .auto,
-                      message: "some text",
+        AMTooltipView(message: "some text",
                       focusView: sender as! UIView,
                       target: self)
         
     }
+    
+    
+    @IBAction func showCustomizedTooltipAction(_ sender: Any) {
+        
+        
+
+        
+        AMTooltipView(
+            options:AMTooltipViewOptions(
+                textColor: UIColor.white,
+                textBoxBackgroundColor: UIColor.gray,
+                addOverlayView: false,
+                lineColor: UIColor.gray,
+                dotColor: UIColor.lightGray,
+                dotBorderColor: UIColor.gray
+            ),
+            message: "some customized text",
+            focusView: sender as! UIView,
+            target: self)
+        
+    }
+    
 
 }
 

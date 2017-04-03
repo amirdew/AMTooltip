@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+
 @objc public enum AMTooltipViewSide:Int{
     case bottom = 1
     case top = 2
@@ -18,11 +20,83 @@ import UIKit
 }
 
 
-//default config
-
-struct AMTooltipViewConfig{
+public class AMTooltipViewOptions{
     
-    var side:AMTooltipViewSide = .auto
+    
+    var side:AMTooltipViewSide!
+    var textColor:UIColor!
+    var textWidth:CGFloat!
+    var font:UIFont!
+    var textAlignment:NSTextAlignment!
+    var textBoxBackgroundColor:UIColor!
+    var textBoxCornerRadius:CGFloat!
+    var textBoxBorderColor:UIColor!
+    var textBoxBorderWidth:CGFloat!
+    var addOverlayView:Bool = true
+    var overlayBackgroundColor:UIColor!
+    var lineColor:UIColor!
+    var lineWidth:CGFloat!
+    var lineHeight:CGFloat!
+    var dotColor:UIColor!
+    var dotSize:CGFloat!
+    var dotBorderWidth:CGFloat!
+    var dotBorderColor:UIColor!
+    var focusViewRadius:CGFloat!
+    var focustViewVerticalPadding:CGFloat!
+    var focustViewHorizontalPadding:CGFloat!
+    
+    
+    
+    public init(
+        side:AMTooltipViewSide = .auto,
+        textColor:UIColor = UIColor.black,
+        textWidth:CGFloat = 270,
+        font:UIFont = UIFont.systemFont(ofSize: 14),
+        textAlignment:NSTextAlignment = .natural,
+        textBoxBackgroundColor:UIColor = UIColor.white,
+        textBoxCornerRadius:CGFloat = 6,
+        textBoxBorderColor:UIColor = UIColor.clear,
+        textBoxBorderWidth:CGFloat = 0,
+        addOverlayView:Bool = true,
+        overlayBackgroundColor:UIColor = UIColor.black.withAlphaComponent(0.4),
+        lineColor:UIColor = UIColor.white,
+        lineWidth:CGFloat = 2,
+        lineHeight:CGFloat = 30,
+        dotColor:UIColor = UIColor.lightGray,
+        dotSize:CGFloat = 13,
+        dotBorderWidth:CGFloat = 2,
+        dotBorderColor:UIColor = UIColor.white,
+        focusViewRadius:CGFloat = 6,
+        focustViewVerticalPadding:CGFloat = 5,
+        focustViewHorizontalPadding:CGFloat = 15
+        ){
+     
+        self.side = side
+        self.textColor = textColor
+        self.textWidth = textWidth
+        self.font = font
+        self.textAlignment = textAlignment
+        self.textBoxBackgroundColor = textBoxBackgroundColor
+        self.textBoxCornerRadius = textBoxCornerRadius
+        self.textBoxBorderColor = textBoxBorderColor
+        self.textBoxBorderWidth = textBoxBorderWidth
+        self.addOverlayView = addOverlayView
+        self.overlayBackgroundColor = overlayBackgroundColor
+        self.lineColor = lineColor
+        self.lineWidth = lineWidth
+        self.lineHeight = lineHeight
+        self.dotColor = dotColor
+        self.dotSize = dotSize
+        self.dotBorderWidth = dotBorderWidth
+        self.dotBorderColor = dotBorderColor
+        self.focusViewRadius = focusViewRadius
+        self.focustViewVerticalPadding = focustViewVerticalPadding
+        self.focustViewHorizontalPadding = focustViewHorizontalPadding
+         
+        
+    }
+    
+    
 }
 
 
@@ -31,11 +105,9 @@ struct AMTooltipViewConfig{
 
 open class AMTooltipView: UIView {
     
-    var duration:CGFloat = 4.0
-    var animationShowDuration = 0.45
-    var animationHideDuration = 0.55
     
-    var config:AMTooltipViewConfig = AMTooltipViewConfig()
+    var options:AMTooltipViewOptions!
+    
     
     var darkView:UIView!
     
@@ -52,10 +124,20 @@ open class AMTooltipView: UIView {
     @IBOutlet weak var messageRightSpaceFromBottomDot: NSLayoutConstraint!
     
     
+    
+    @IBOutlet weak var topDotLineWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var topDotLineHeightConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var topDotViewSizeConstraint: NSLayoutConstraint!
     @IBOutlet weak open  var topDotView: UIView!
     @IBOutlet weak open  var topDotLineView: UIView!
     @IBOutlet weak open  var messageWrapperView: UIView!
     
+    
+    @IBOutlet weak var bottomDotLineWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var bottomDotLineHeightConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var bottomDotViewSizeConstraint: NSLayoutConstraint!
     @IBOutlet weak open  var bottomDotView: UIView!
     @IBOutlet weak open  var bottomDotLineView: UIView!
     @IBOutlet weak open  var bottomMessageWrapperView: UIView!
@@ -89,9 +171,7 @@ open class AMTooltipView: UIView {
             
             ])
         
-        bottomDotView.layer.borderColor = UIColor.white.cgColor
-        topDotView.layer.borderColor = UIColor.white.cgColor
-        
+       
     }
     
     fileprivate func loadNib() {
@@ -119,7 +199,8 @@ open class AMTooltipView: UIView {
     
     //MARK: - init and show
     
-    @discardableResult convenience public init(side:AMTooltipViewSide, message:String!, focusView:UIView, target:Any, complete:(()->())! = nil){
+    
+    @discardableResult convenience public init(options:AMTooltipViewOptions = AMTooltipViewOptions(), message:String!, focusView:UIView, target:Any, complete:(()->())! = nil){
         
         var view:UIView!
         if let targetView = target as? UIView{ view = targetView}
@@ -133,25 +214,27 @@ open class AMTooltipView: UIView {
         
         var focusFrame =  (focusView.superview?.convert(focusView.frame, to: view))!
         
-        focusFrame.size.width += 30
-        focusFrame.size.height += 10
         
-        focusFrame.origin.y -= 5
-        focusFrame.origin.x -= 15
         
-        self.init(side: side, message: message, focusFrame: focusFrame, target: target, complete:complete)
+        focusFrame.size.width += options.focustViewHorizontalPadding * 2
+        focusFrame.size.height += options.focustViewVerticalPadding * 2
+        
+        focusFrame.origin.y -= options.focustViewVerticalPadding
+        focusFrame.origin.x -= options.focustViewHorizontalPadding
+        
+        
+        self.init(options: options, message: message, focusFrame: focusFrame, target: target, complete:complete)
     }
     
     
     
-    @discardableResult convenience public init(side:AMTooltipViewSide, message:String!, focusFrame:CGRect, target:Any, complete:(()->())! = nil){
+    @discardableResult convenience public init(options:AMTooltipViewOptions = AMTooltipViewOptions(), message:String!, focusFrame:CGRect, target:Any, complete:(()->())! = nil){
         
         
         self.init(frame:.zero)
         setup()
-        
-        
-        config.side = side
+        self.options = options
+        applyOptions()
         
         
         var view:UIView!
@@ -163,7 +246,7 @@ open class AMTooltipView: UIView {
         for subView in view.subviews{
             if let tooltip = subView as? AMTooltipView{
                 tooltip.removeFromSuperview()
-                AMTooltipView(side:side, message:message, focusFrame:focusFrame, target:target)
+                AMTooltipView(options:options, message:message, focusFrame:focusFrame, target:target)
                 return
             }
         }
@@ -191,6 +274,10 @@ open class AMTooltipView: UIView {
         
         grayWrapper.cutView = cutOutView
         
+        if !self.options.addOverlayView {
+            grayWrapper.backgroundColor = UIColor.clear
+        }
+        
         
         let tap = UITapGestureRecognizer { (gesture:UIGestureRecognizer) in
             
@@ -209,23 +296,67 @@ open class AMTooltipView: UIView {
     
     
     
+    func applyOptions(){
+    
+        
+        
+        messageLabel.textColor = self.options.textColor
+        messageLabel.font = self.options.font
+        messageLabel.textAlignment = self.options.textAlignment
+        messageWrapperView.backgroundColor = self.options.textBoxBackgroundColor
+        messageWrapperView.layer.cornerRadius = self.options.textBoxCornerRadius
+        messageWrapperView.layer.borderColor = self.options.textBoxBorderColor.cgColor
+        messageWrapperView.layer.borderWidth = self.options.textBoxBorderWidth
+        topDotLineView.backgroundColor = self.options.lineColor
+        topDotLineWidthConstraint.constant = self.options.lineWidth
+        topDotLineHeightConstraint.constant = self.options.lineHeight
+        topDotView.backgroundColor = self.options.dotColor
+        topDotViewSizeConstraint.constant = self.options.dotSize
+        topDotView.layer.borderWidth = self.options.dotBorderWidth
+        topDotView.layer.borderColor = self.options.dotBorderColor.cgColor
+        
+        
+        
+        bottomMessageLabel.textColor = self.options.textColor
+        bottomMessageLabel.font = self.options.font
+        bottomMessageLabel.textAlignment = self.options.textAlignment
+        bottomMessageWrapperView.backgroundColor = self.options.textBoxBackgroundColor
+        bottomMessageWrapperView.layer.cornerRadius = self.options.textBoxCornerRadius
+        bottomMessageWrapperView.layer.borderColor = self.options.textBoxBorderColor.cgColor
+        bottomMessageWrapperView.layer.borderWidth = self.options.textBoxBorderWidth
+        bottomDotLineView.backgroundColor = self.options.lineColor
+        bottomDotLineWidthConstraint.constant = self.options.lineWidth
+        bottomDotLineHeightConstraint.constant = self.options.lineHeight
+        bottomDotView.backgroundColor = self.options.dotColor
+        bottomDotViewSizeConstraint.constant = self.options.dotSize
+        bottomDotView.layer.borderWidth = self.options.dotBorderWidth
+        bottomDotView.layer.borderColor = self.options.dotBorderColor.cgColor
+        
+        
+        
+        cutOutView.layer.cornerRadius = self.options.focusViewRadius
+        grayWrapper.backgroundColor = self.options.overlayBackgroundColor
+        
+    }
+    
+    
+    
     func show(){
         
         
         
-        
         self.alpha = 0
-        textWidthConstraint.constant = 270
+        textWidthConstraint.constant = options.textWidth
         bottomTextWidthConstraint.constant  = textWidthConstraint.constant
         self.layoutIfNeeded()
         
         
-        if config.side == .auto {
+        if options.side == .auto {
             
-            config.side = .bottom
+            options.side = .bottom
             
             if messageWrapperView.frame.origin.y > 10{
-                config.side = .top
+                options.side = .top
             }
             
             
@@ -245,13 +376,13 @@ open class AMTooltipView: UIView {
         
         
         
-        topDotView.isHidden = config.side != .top
-        topDotLineView.isHidden = config.side != .top
-        messageWrapperView.isHidden = config.side != .top
+        topDotView.isHidden = options.side != .top
+        topDotLineView.isHidden = options.side != .top
+        messageWrapperView.isHidden = options.side != .top
         
-        bottomDotView.isHidden = config.side != .bottom
-        bottomDotLineView.isHidden = config.side != .bottom
-        bottomMessageWrapperView.isHidden = config.side != .bottom
+        bottomDotView.isHidden = options.side != .bottom
+        bottomDotLineView.isHidden = options.side != .bottom
+        bottomMessageWrapperView.isHidden = options.side != .bottom
         
         
         messageLabel.text = message
