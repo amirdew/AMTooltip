@@ -27,7 +27,13 @@ pod "AMTooltip"
 ```
 
 
-## Usage
+## Usage (swift 3)
+
+```swift
+import AMTooltip
+```
+
+
 
 With focus view and default options:
 
