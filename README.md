@@ -111,6 +111,7 @@ With dismiss closure:
 
 ## Todo
 
+ * Support left and right side
  * Custom animations
  * Custom pointers (arrow, images, ...)
  * Custom view instead tooltip box
