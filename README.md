@@ -5,6 +5,17 @@
 [![License](https://img.shields.io/cocoapods/l/AMTooltip.svg?style=flat)](http://cocoapods.org/pods/AMTooltip)
 [![Platform](https://img.shields.io/cocoapods/p/AMTooltip.svg?style=flat)](http://cocoapods.org/pods/AMTooltip)
 
+## Screenshots
+
+<img width="375" src="https://raw.githubusercontent.com/amirdew/AMTooltip/master/Example/screenshots_1.png"><img width="375" src="https://raw.githubusercontent.com/amirdew/AMTooltip/master/Example/screenshots_2.png">
+
+
+## Requirements
+
+iOS 8+
+
+Expample write in Xcode 8.3 - Swift 3.1
+
 
 ## Installation
 
@@ -54,6 +65,43 @@ With custom options:
 
 ```
 
+With dismiss closure:
+
+```swift
+
+        AMTooltipView(message: "some text",
+                      focusView: focusView,
+                      target: self) {
+                      
+                        print("tooltip dismissed") 
+        }
+```
+
+## Options
+
+| Name | Type | Default | Description |
+|:----:|:----:|:---:|:-------:|
+|side|AMTooltipViewSide|```.auto```|Side of show tooltip ```(.auto/.top/.bottom)```
+|textColor|UIColor|```UIColor.black```|Color of message text
+|textWidth|CGFloat|```270```|Width of message
+|font|UIFont|```UIFont.systemFont(ofSize: 14)```|Font of message text
+|textAlignment|NSTextAlignment|```.natural```|Alignment of message text
+|textBoxBackgroundColor|UIColor|```UIColor.white```|Color of message box
+|textBoxCornerRadius|CGFloat|```6```|Radius for corners of message box
+|textBoxBorderColor|UIColor|```UIColor.clear```|Color for border of message box
+|textBoxBorderWidth|CGFloat|```0```|Width for border of message box
+|addOverlayView|Bool|```true```|if false dark overlay view hide
+|overlayBackgroundColor|UIColor|```UIColor.black.withAlphaComponent(0.4)```|Color of overlay view
+|lineColor|UIColor|```UIColor.white```|Color of pin line view
+|lineWidth|CGFloat|```2```|Width of pin line view
+|lineHeight|CGFloat|```30```|Height of pin line view
+|dotColor|UIColor|```UIColor.lightGray```|Color of pin dot
+|dotSize|CGFloat|```13```|Size of pin dot
+|dotBorderWidth|CGFloat|```2```|Size for border of pin dot 
+|dotBorderColor|UIColor|```UIColor.white```|Color for border of pin dot
+|focusViewRadius|CGFloat|```6```|Radius for corners of focused view
+|focustViewVerticalPadding|CGFloat|```5```|Vertical padding for focused view
+|focustViewHorizontalPadding|CGFloat|```15```|Horizontal padding for focused view
 
 
 ## License
