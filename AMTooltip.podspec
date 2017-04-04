@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
                        DESC
 
   s.homepage         = 'https://github.com/amirdew/AMTooltip'
-  s.screenshots      = 'https://github.com/amirdew/AMTooltip/screenshots_1.png', 'https://github.com/amirdew/AMTooltip/screenshots_2.png'
+  s.screenshots      = 'https://raw.githubusercontent.com/amirdew/AMTooltip/master/Example/screenshots_1.png', 'https://raw.githubusercontent.com/amirdew/AMTooltip/master/Example/screenshots_2.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'amir khorsandi' => 'khorsandi@me.com' }
   s.source           = { :git => 'https://github.com/amirdew/AMTooltip.git', :tag => s.version.to_s } 
