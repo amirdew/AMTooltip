@@ -150,6 +150,10 @@ open class AMTooltipView: UIView {
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var bottomMessageLabel: UILabel!
     
+    
+    var completeClosure:(()->())!
+    
+    
     //MARK: - properties
     open var delegate:AMTooltipViewDelegate!
     @IBOutlet weak var contentView: UIView!
@@ -278,11 +282,9 @@ open class AMTooltipView: UIView {
             grayWrapper.backgroundColor = UIColor.clear
         }
         
+        completeClosure = complete
         
-        let tap = UITapGestureRecognizer { (gesture:UIGestureRecognizer) in
-            
-            self.hide(complete)
-        }
+        let tap = UITapGestureRecognizer(target: self, action: #selector(hideByTapGesture))
         
         tap.numberOfTapsRequired = 1
         tap.numberOfTouchesRequired = 1
@@ -292,6 +294,13 @@ open class AMTooltipView: UIView {
         self.show()
         
         
+    }
+    
+    
+    func hideByTapGesture(){
+    
+        self.hide(completeClosure)
+    
     }
     
     
@@ -437,46 +446,6 @@ class CutOutViewWrapper:UIView{
     
 }
 
-
-//MARK: -
-
-
-
-extension UIGestureRecognizer{
-    
-    public typealias ActionClosure = (_ gesture: UIGestureRecognizer) -> Void
-    
-    fileprivate struct AssociatedKeys {
-        static var actionClosure:ActionClosure?
-    }
-    
-    var actionClosure: Any? {
-        get {
-            return objc_getAssociatedObject(self, &AssociatedKeys.actionClosure)
-        }
-        set {
-            if let newValue = newValue {
-                objc_setAssociatedObject(self, &AssociatedKeys.actionClosure, newValue as Any?, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            }
-        }
-    }
-    
-    
-    public convenience init(_ closure:@escaping ActionClosure) {
-        
-        self.init()
-        self.addTarget(self, action: #selector(handelAction))
-        self.actionClosure = closure
-        
-    }
-    
-    
-    func handelAction(_ gesture:UIGestureRecognizer){
-        if let actionClosure = self.actionClosure as? ActionClosure{
-            actionClosure(gesture)
-        }
-    }
-}
-
+ 
 
 
