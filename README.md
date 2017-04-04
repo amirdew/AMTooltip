@@ -109,6 +109,12 @@ With dismiss closure:
 |focustViewVerticalPadding|CGFloat|```5```|Vertical padding for focused view
 |focustViewHorizontalPadding|CGFloat|```15```|Horizontal padding for focused view
 
+## Todo
+
+ * Custom animations
+ * Custom pointers (arrow, images, ...)
+ * Custom view instead tooltip box
+
 
 ## License
 
