@@ -30,8 +30,8 @@ With focus frame and default options:
 
 ```swift
           AMTooltipView(message: "some text",
-                        focusFrame: CGRect(x:100, y:150, width:40, height:25) //pass view you want show tooltip over it
-                        target: self)  //you can pass UIViewController or UIView as target
+                        focusFrame: CGRect(x:100, y:150, width:40, height:25)
+                        target: self) 
 ```
 
 
