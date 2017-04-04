@@ -5,11 +5,6 @@
 [![License](https://img.shields.io/cocoapods/l/AMTooltip.svg?style=flat)](http://cocoapods.org/pods/AMTooltip)
 [![Platform](https://img.shields.io/cocoapods/p/AMTooltip.svg?style=flat)](http://cocoapods.org/pods/AMTooltip)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
 
 ## Installation
 
@@ -20,9 +15,46 @@ it, simply add the following line to your Podfile:
 pod "AMTooltip"
 ```
 
-## Author
 
-amirdew, khorsandi@me.com
+## Usage
+
+With focus view and default options:
+
+```swift
+          AMTooltipView(message: "some text",
+                        focusView: focusView, //pass view you want show tooltip over it
+                        target: self)  //you can pass UIViewController or UIView as target
+```
+
+With focus frame and default options:
+
+```swift
+          AMTooltipView(message: "some text",
+                        focusFrame: CGRect(x:100, y:150, width:40, height:25) //pass view you want show tooltip over it
+                        target: self)  //you can pass UIViewController or UIView as target
+```
+
+
+With custom options:
+
+```swift
+
+          AMTooltipView(
+            options:AMTooltipViewOptions(
+                textColor: UIColor.white,
+                textBoxBackgroundColor: UIColor.gray,
+                addOverlayView: false,
+                lineColor: UIColor.gray,
+                dotColor: UIColor.lightGray,
+                dotBorderColor: UIColor.gray
+            ),
+            message: "some customized text",
+            focusView: focusView,
+            target: self)
+
+```
+
+
 
 ## License
 
