@@ -22,8 +22,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFI-D1-ENy">
+                                <rect key="frame" x="237" y="68.5" width="89" height="30"/>
+                                <state key="normal" title="Show Tooltip"/>
+                                <connections>
+                                    <action selector="showTooltipAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JQj-xn-ZWh"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sc-qS-lXN">
-                                <rect key="frame" x="143" y="65" width="89" height="30"/>
+                                <rect key="frame" x="49.5" y="402" width="89" height="30"/>
                                 <state key="normal" title="Show Tooltip"/>
                                 <connections>
                                     <action selector="showTooltipAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Je6-TY-cmW"/>
@@ -36,13 +43,33 @@
                                     <action selector="showCustomizedTooltipAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LJv-MY-cev"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBt-3c-jDG">
+                                <rect key="frame" x="237" y="402" width="89" height="30"/>
+                                <state key="normal" title="Show Tooltip"/>
+                                <connections>
+                                    <action selector="showTooltipAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qef-jk-Atf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOg-Ri-vSo">
+                                <rect key="frame" x="49.5" y="68.5" width="89" height="30"/>
+                                <state key="normal" title="Show Tooltip"/>
+                                <connections>
+                                    <action selector="showTooltipAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UU0-4n-nHC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="vBt-3c-jDG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.25" id="BYI-0Z-cqc"/>
                             <constraint firstItem="Uv0-OI-dIx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.75" id="IV3-tg-8i8"/>
-                            <constraint firstItem="1sc-qS-lXN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.24" id="Ozi-D2-5NP"/>
+                            <constraint firstItem="1sc-qS-lXN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.25" id="Ozi-D2-5NP"/>
                             <constraint firstItem="Uv0-OI-dIx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RPc-zS-JoK"/>
-                            <constraint firstItem="1sc-qS-lXN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lfS-2G-YQi"/>
+                            <constraint firstItem="XFI-D1-ENy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.5" id="kle-w3-9yx"/>
+                            <constraint firstItem="1sc-qS-lXN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.5" id="lfS-2G-YQi"/>
+                            <constraint firstItem="vBt-3c-jDG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.5" id="n1I-SB-dlr"/>
+                            <constraint firstItem="wOg-Ri-vSo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.25" id="va1-Uy-n8Q"/>
+                            <constraint firstItem="wOg-Ri-vSo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.5" id="wMb-GO-yW3"/>
+                            <constraint firstItem="XFI-D1-ENy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.25" id="wiG-nr-RmI"/>
                         </constraints>
                     </view>
                 </viewController>

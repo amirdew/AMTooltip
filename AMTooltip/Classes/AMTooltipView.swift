@@ -157,6 +157,9 @@ open class AMTooltipView: UIView {
     //MARK: - properties
     open var delegate:AMTooltipViewDelegate!
     @IBOutlet weak var contentView: UIView!
+    var targetView:UIView!
+    var focusView:UIView!
+    var focusFrame:CGRect!
     
     
     //MARK: - init
@@ -228,6 +231,9 @@ open class AMTooltipView: UIView {
         
         
         self.init(options: options, message: message, focusFrame: focusFrame, target: target, complete:complete)
+        
+        
+        self.focusView = focusView
     }
     
     
@@ -236,9 +242,19 @@ open class AMTooltipView: UIView {
         
         
         self.init(frame:.zero)
+        
+        self.focusFrame = focusFrame
         setup()
         self.options = options
         applyOptions()
+        
+        
+        //register notification for rotate
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.deviceOrientationDidChangeNotification),
+                                               name: NSNotification.Name(rawValue: "UIDeviceOrientationDidChangeNotification"),
+                                               object: nil)
+        
         
         
         var view:UIView!
@@ -255,12 +271,15 @@ open class AMTooltipView: UIView {
             }
         }
         
-        view.addSubview(self)
+        targetView = view
+        
+        
+        targetView.addSubview(self)
         
         self.translatesAutoresizingMaskIntoConstraints = false
         messageLabel.text = message
         
-        view.addConstraints([
+        targetView.addConstraints([
             
             NSLayoutConstraint(item: self, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 1, constant: 0),
             NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 1, constant: 0),
@@ -367,9 +386,8 @@ open class AMTooltipView: UIView {
             if messageWrapperView.frame.origin.y > 10{
                 options.side = .top
             }
-            
-            
         }
+        
         
         let message = messageLabel.text
         messageLabel.text = ""
@@ -378,7 +396,7 @@ open class AMTooltipView: UIView {
         
         
         
-        topDotLeftSpace.constant = grayWrapper.cutView.frame.size.width/2
+        topDotLeftSpace.constant = grayWrapper.cutView.frame.size.width/2-7
         bottomDotLeftSpace.constant = topDotLeftSpace.constant
         messageRightSpaceFromTopDot.constant = -textWidthConstraint.constant/2-6
         messageRightSpaceFromBottomDot.constant = -messageRightSpaceFromTopDot.constant+4
@@ -394,6 +412,39 @@ open class AMTooltipView: UIView {
         bottomMessageWrapperView.isHidden = options.side != .bottom
         
         
+        
+        let padding:CGFloat = 18
+        
+        
+        //check popup in window frame
+       
+            let spaceFromLeftSide = cutOutViewX.constant + cutOutViewWidth.constant/2 - (options.textWidth + padding*2)/2
+            
+            if spaceFromLeftSide < 0{
+                
+                if options.side == .bottom {
+                    messageRightSpaceFromBottomDot.constant -= spaceFromLeftSide - padding
+                }
+                else if options.side == .top{
+                    messageRightSpaceFromTopDot.constant += spaceFromLeftSide - padding
+                }
+            }
+            
+            let spaceFromRightSide = cutOutViewX.constant + cutOutViewWidth.constant/2 + (options.textWidth + padding*2)/2
+            
+            if spaceFromRightSide > targetView.frame.size.width{
+                
+                if options.side == .bottom {
+                    messageRightSpaceFromBottomDot.constant -= spaceFromRightSide - ( targetView.frame.size.width )
+                }
+                else if options.side == .top{
+                    messageRightSpaceFromTopDot.constant += spaceFromRightSide - ( targetView.frame.size.width )
+                }
+            }
+            
+       
+        
+        
         messageLabel.text = message
         bottomMessageLabel.text = message
         
@@ -402,12 +453,17 @@ open class AMTooltipView: UIView {
             self.layoutIfNeeded()
         }) { (finished:Bool) in
             
+            
         }
         
     }
     
     
     open func hide(_ complete: (()->())! = nil){
+        
+        NotificationCenter.default.removeObserver(self,
+                                                  name: NSNotification.Name(rawValue: "UIDeviceOrientationDidChangeNotification"),
+                                                  object: nil)
         
         UIView.animate(withDuration: 0.3, animations: {
             self.alpha = 0
@@ -419,6 +475,34 @@ open class AMTooltipView: UIView {
         }
         
     }
+    
+    
+    //MARK: - rotate hande
+    
+    func deviceOrientationDidChangeNotification(notification:NSNotification){
+        
+        self.hide { 
+            
+            if self.focusView != nil{
+                AMTooltipView(options: self.options,
+                              message: self.messageLabel.text,
+                              focusView: self.focusView,
+                              target: self.targetView,
+                              complete: self.completeClosure)
+            }
+            else{
+                AMTooltipView(options: self.options,
+                              message: self.messageLabel.text,
+                              focusFrame: self.focusFrame,
+                              target: self.targetView,
+                              complete: self.completeClosure)
+            }
+            
+        }
+    
+    }
+    
+    
     
 }
 
