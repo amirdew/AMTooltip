@@ -110,7 +110,8 @@ With dismiss closure:
 |focustViewHorizontalPadding|CGFloat|```15```|Horizontal padding for focused view
 
 ## Todo
-
+ * ~~Add support for screen rotate~~
+ * ~~Adjust messageBox with target view frame~~
  * Support left and right side
  * Custom animations
  * Custom pointers (arrow, images, ...)
