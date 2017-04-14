@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AMTooltip'
-  s.version          = '1.0.3'
+  s.version          = '1.0.4'
   s.summary          = 'Simple library to show tooltip.'
  
   s.description      = <<-DESC
