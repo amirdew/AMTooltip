@@ -44,7 +44,7 @@ public class AMTooltipViewOptions{
     var focusViewRadius:CGFloat!
     var focustViewVerticalPadding:CGFloat!
     var focustViewHorizontalPadding:CGFloat!
-    
+    var customViews: [UIView]?
     
     
     public init(
@@ -68,7 +68,8 @@ public class AMTooltipViewOptions{
         dotBorderColor:UIColor = UIColor.white,
         focusViewRadius:CGFloat = 6,
         focustViewVerticalPadding:CGFloat = 5,
-        focustViewHorizontalPadding:CGFloat = 15
+        focustViewHorizontalPadding:CGFloat = 15,
+        customViews:[UIView]? = nil
         ){
      
         self.side = side
@@ -92,7 +93,7 @@ public class AMTooltipViewOptions{
         self.focusViewRadius = focusViewRadius
         self.focustViewVerticalPadding = focustViewVerticalPadding
         self.focustViewHorizontalPadding = focustViewHorizontalPadding
-         
+        self.customViews = customViews
         
     }
     
@@ -308,6 +309,12 @@ open class AMTooltipView: UIView {
         tap.numberOfTapsRequired = 1
         tap.numberOfTouchesRequired = 1
         grayWrapper.addGestureRecognizer(tap)
+        
+        if let customViews = self.options.customViews {
+            for view in customViews {
+                self.addSubview(view)
+            }
+        }
         
         
         self.show()
