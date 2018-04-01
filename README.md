@@ -14,7 +14,7 @@
 
 iOS 8+
 
-Expample write in Xcode 8.3 - Swift 3.1
+Example written in Xcode 8.3 with Swift 3.1
 
 
 ## Installation
