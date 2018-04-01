@@ -40,7 +40,7 @@ With focus view and default options:
 ```swift
           AMTooltipView(message: "some text",
                         focusView: focusView, //pass view you want show tooltip over it
-                        target: self)  //you can pass UIViewController or UIView as target
+                        target: self)  //you can pass UIViewController or UIView as a target
 ```
 
 With focus frame and default options:
